@@ -191,7 +191,33 @@
       <!--Section: Modals-->
       <section>
 
+        <!--Modal: modalConfirmDelete-->
+        <div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm modal-notify modal-danger" role="document">
+            <!--Content-->
+            <div class="modal-content text-center">
+              <!--Header-->
+              <div class="modal-header d-flex justify-content-center">
+                <p class="heading">Are you sure?</p>
+              </div>
 
+              <!--Body-->
+              <div class="modal-body">
+
+                <i class="fa fa-times fa-4x animated rotateIn"></i>
+
+              </div>
+
+              <!--Footer-->
+              <div class="modal-footer flex-center">
+                <a href="https://mdbootstrap.com/product/material-design-for-bootstrap-pro/" class="btn  btn-outline-secondary-modal">Yes</a>
+                <a type="button" class="btn  btn-primary-modal waves-effect" data-dismiss="modal">No</a>
+              </div>
+            </div>
+            <!--/.Content-->
+          </div>
+        </div>
+        <!--Modal: modalConfirmDelete-->
 
       </section>
       <!--Section: Modals-->
@@ -452,15 +478,15 @@
           <a href="" class="white-text mx-3">Table name</a>
 
           <div>
+            <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2" data-toggle="modal" data-target="#modalConfirmDelete">
+              <i class="fa fa-remove mt-0"></i>
+            </button>
             <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
-          <i class="fa fa-pencil mt-0"></i>
-      </button>
+              <i class="fa fa-remove mt-0"></i>
+            </button>
             <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
-          <i class="fa fa-remove mt-0"></i>
-      </button>
-            <button type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
-          <i class="fa fa-info-circle mt-0"></i>
-      </button>
+              <i class="fa fa-info-circle mt-0"></i>
+            </button>
           </div>
 
         </div>
@@ -471,10 +497,12 @@
           <div class="table-responsive">
 
             <table class="table">
-
               <thead>
                 <tr>
-                  <th>#</th>
+                  <th>
+                    <input type="checkbox" id="checkbox">
+                    <label for="checkbox" class="label-table"></label>
+                  </th>
                   <th class="th-lg">First column</th>
                   <th class="th-lg">Second column</th>
                   <th class="th-lg">Third column</th>
@@ -485,7 +513,10 @@
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">1</th>
+                  <th scope="row">
+                    <input type="checkbox" id="checkbox1">
+                    <label for="checkbox1" class="label-table"></label>
+                  </th>
                   <td>Lorem Ipsum</td>
                   <td>Lorem Ipsum</td>
                   <td>Lorem Ipsum</td>
@@ -494,7 +525,10 @@
                   <td>Lorem Ipsum</td>
                 </tr>
                 <tr>
-                  <th scope="row">2</th>
+                  <th scope="row">
+                    <input type="checkbox" id="checkbox2">
+                    <label for="checkbox2" class="label-table"></label>
+                  </th>
                   <td>Lorem Ipsum</td>
                   <td>Lorem Ipsum</td>
                   <td>Lorem Ipsum</td>
@@ -503,7 +537,10 @@
                   <td>Lorem Ipsum</td>
                 </tr>
                 <tr>
-                  <th scope="row">3</th>
+                  <th scope="row">
+                    <input type="checkbox" id="checkbox3">
+                    <label for="checkbox3" class="label-table"></label>
+                  </th>
                   <td>Lorem Ipsum</td>
                   <td>Lorem Ipsum</td>
                   <td>Lorem Ipsum</td>
@@ -513,7 +550,72 @@
                 </tr>
               </tbody>
             </table>
+            <hr class="my-0">
 
+            <!--Bottom Table UI-->
+            <div class="d-flex justify-content-between">
+
+              <!--Name-->
+              <select class="mdb-select colorful-select dropdown-primary mt-2 hidden-md-down">
+                <option value="" disabled>Rows number</option>
+                <option value="1" selected>10 rows</option>
+                <option value="2">25 rows</option>
+                <option value="3">50 rows</option>
+                <option value="4">100 rows</option>
+              </select>
+              <!--Pagination -->
+              <nav class="mt-4">
+                <ul class="pagination pagination-circle pg-blue mb-0">
+
+                  <!--First-->
+                  <li class="page-item disabled">
+                    <a class="page-link">First</a>
+                  </li>
+
+                  <!--Arrow left-->
+                  <li class="page-item disabled">
+                    <a class="page-link" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                  </li>
+
+                  <!--Numbers-->
+                  <li class="page-item active">
+                    <a class="page-link">1</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link">2</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link">3</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link">4</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link">5</a>
+                  </li>
+
+                  <!--Arrow right-->
+                  <li class="page-item">
+                    <a class="page-link" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                      <span class="sr-only">Next</span>
+                     </a>
+                  </li>
+
+                  <!--First-->
+                  <li class="page-item">
+                    <a class="page-link">Last</a>
+                  </li>
+
+                </ul>
+              </nav>
+              <!--/Pagination -->
+
+            </div>
+            <!--Bottom Table UI-->
           </div>
 
         </div>
